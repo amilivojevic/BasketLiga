@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { getTeamById, getPlayersByTeam, getGamesByTeam, getTeamById as teamById } from "../data/mockData";
+import { getTeamById, getPlayersByTeam, getGamesByTeam } from "../data/mockData";
 import PlayerRow from "../components/PlayerRow";
 import GameCard from "../components/GameCard";
 import "../styles/team.css";
