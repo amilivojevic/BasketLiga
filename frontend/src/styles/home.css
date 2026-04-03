@@ -1,0 +1,145 @@
+/* ─── HERO BANNER ──────────────────────────────────────────────────────────── */
+.home-hero {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 50%, rgba(247,148,29,0.12) 0%, transparent 55%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      rgba(255,255,255,0.015) 30px,
+      rgba(255,255,255,0.015) 31px
+    );
+  pointer-events: none;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 span {
+  color: var(--orange);
+}
+
+.hero-text p {
+  color: var(--gray-200);
+  font-size: 1.05rem;
+  max-width: 420px;
+}
+
+.hero-badge {
+  background: rgba(247,148,29,0.15);
+  border: 2px solid var(--orange);
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.hero-badge .badge-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--orange);
+  display: block;
+  line-height: 1;
+}
+
+.hero-badge .badge-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-200);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .home-hero { flex-direction: column; padding: 32px 24px; }
+  .hero-text h1 { font-size: 1.9rem; }
+  .hero-badge { width: 100%; }
+}
+
+/* ─── HOME GRID ────────────────────────────────────────────────────────────── */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .home-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── SECTION HEADER ───────────────────────────────────────────────────────── */
+.home-section {
+  margin-bottom: 40px;
+}
+
+/* ─── STANDINGS ────────────────────────────────────────────────────────────── */
+.standings-rank {
+  font-weight: 800;
+  color: var(--orange) !important;
+  font-size: 1rem;
+}
+
+.standings-rank.top { color: var(--orange) !important; }
+
+.team-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--navy) !important;
+}
+
+.team-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--white);
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.diff-positive { color: var(--green) !important; font-weight: 700; }
+.diff-negative { color: var(--red) !important; font-weight: 700; }
+.diff-zero     { color: var(--gray-400) !important; font-weight: 700; }
+
+/* ─── TEAMS GRID ───────────────────────────────────────────────────────────── */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* ─── GAME SIDEBAR ─────────────────────────────────────────────────────────── */
+.games-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

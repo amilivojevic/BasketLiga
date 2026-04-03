@@ -1,0 +1,174 @@
+/* ─── GAME CARD ────────────────────────────────────────────────────────────── */
+.game-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-card {
+  padding: 16px;
+}
+
+.game-card-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.game-card-datestr {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-weight: 600;
+}
+
+.game-card-matchup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.game-card-team {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+}
+
+.game-card-team.away {
+  flex-direction: row-reverse;
+}
+
+.game-card-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 900;
+  color: var(--white);
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.game-card-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--navy);
+  flex: 1;
+}
+
+.game-card-team.away .game-card-name {
+  text-align: right;
+}
+
+.game-card-score {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.score-win  { color: var(--navy); }
+.score-loss { color: var(--gray-400); }
+
+.game-card-sep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.vs-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--gray-400);
+  letter-spacing: 0.1em;
+}
+
+.game-card-venue {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  text-align: center;
+  padding-top: 4px;
+  border-top: 1px solid var(--gray-100);
+}
+
+/* ─── TEAM CARD ────────────────────────────────────────────────────────────── */
+.team-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+}
+
+.team-card-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--white);
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-sm);
+}
+
+.team-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-card-city {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.team-card-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-card-record {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.tc-wins   { color: var(--green); font-weight: 700; }
+.tc-sep    { color: var(--gray-400); }
+.tc-losses { color: var(--red); font-weight: 700; }
+
+.team-card-arrow {
+  font-size: 1.4rem;
+  color: var(--gray-200);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.team-card-link:hover .team-card-arrow {
+  color: var(--orange);
+  transform: translateX(3px);
+}

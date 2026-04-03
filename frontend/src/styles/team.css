@@ -1,0 +1,87 @@
+/* ─── TEAM HEADER ──────────────────────────────────────────────────────────── */
+.team-header {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-header::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(247,148,29,0.08);
+  pointer-events: none;
+}
+
+.team-logo-large {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(247,148,29,0.35), var(--shadow-md);
+  letter-spacing: 0.03em;
+}
+
+.team-header-info h1 {
+  font-size: 2.2rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.team-header-info .city {
+  color: var(--gray-400);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.team-record {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.record-pill {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 5px 14px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.record-pill.win  { border-color: rgba(39,174,96,0.5); background: rgba(39,174,96,0.15); color: #6ee09a; }
+.record-pill.loss { border-color: rgba(231,76,60,0.5);  background: rgba(231,76,60,0.15);  color: #f09090; }
+
+@media (max-width: 580px) {
+  .team-header { flex-direction: column; text-align: center; padding: 28px 24px; }
+  .team-record { justify-content: center; }
+  .team-header-info h1 { font-size: 1.7rem; }
+}
+
+/* ─── ROSTER TABLE ─────────────────────────────────────────────────────────── */
+/* .number-cell, .position-badge, .player-link defined in global.css */
+
+/* ─── TEAM GAMES ───────────────────────────────────────────────────────────── */
+.team-games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
