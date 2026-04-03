@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { getGameById, getTeamById, getPlayerById } from "../data/mockData";
 import "../styles/game.css";
 
-function BoxScoreHalf({ lines, team, teamScore, isWinner }) {
+function BoxScoreHalf({ lines, team, teamScore }) {
   return (
     <div className="boxscore-section">
       <div className="boxscore-team-header">
